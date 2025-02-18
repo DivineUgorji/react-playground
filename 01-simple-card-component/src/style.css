@@ -1,0 +1,98 @@
+body {
+  display: grid;
+  place-items: center;
+  margin-block: 5rem;
+}
+
+.profile-card {
+  --max-width: 550px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+  padding: calc(var(--padding) * 2);
+
+  filter: drop-shadow(0 2px 4px 0 hsla(0, 0%, 0%, 0.718));
+
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Utility classes*/
+.flow-content > * + * {
+  margin-top: 2rem;
+}
+
+.flex-style {
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-card__heading {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile-img__container {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-img__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-heading-text p {
+  color: #a09f9f;
+}
+
+.profile-heading-text span,
+.view-text span {
+  color: #000000;
+}
+
+.view-text {
+  color: #a09f9f;
+  align-self: flex-start;
+  margin-left: auto;
+}
+
+/* .view-text span{
+  color: #a09f9f;
+  
+} */
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.375em 0.9375em;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.btn--open {
+  color: #ffffff;
+  background-color: #6666ff;
+  border: none;
+}
+
+.btn--share {
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid #cccccc;
+}
+
+.btn--plus {
+  margin-left: auto;
+}
