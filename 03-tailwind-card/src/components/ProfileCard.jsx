@@ -1,8 +1,9 @@
 import { assets } from "../assets/assets";
+import { MicrophoneIcon } from "@heroicons/react/24/solid";
 
 const ProfileCard = () => {
   return (
-    <div className="max-w-4xl bg-white flex gap-6 py-16 px-6 rounded-3xl">
+    <div className="max-w-4xl bg-white flex flex-col md:flex-row gap-6 py-8 px-4 md:py-16 md:px-6 rounded-sm md:rounded-3xl sm:my-8">
       <div className="rounded-sm">
         <div className="w-44 h-44">
           <img
@@ -19,7 +20,8 @@ const ProfileCard = () => {
             Cards against humanity
           </p>
           <div className="w-full border-t border-gray-300"></div>
-          <div className="flex gap-4">
+          <div className="flex gap-1 items-center">
+            <MicrophoneIcon className="w-4 h-4 text-gray-700" />
             <p className="text-xs text-gray-500 font-normal py-4">
               124 Episodes
             </p>
@@ -43,7 +45,8 @@ const ProfileCard = () => {
             Cards against humanity
           </p>
           <div className="w-full border-t border-gray-300"></div>
-          <div className="flex gap-4">
+          <div className="flex gap-1 items-center">
+            <MicrophoneIcon className="w-4 h-4 text-gray-700" />
             <p className="text-xs text-gray-500 font-normal py-4">
               124 Episodes
             </p>
@@ -67,7 +70,8 @@ const ProfileCard = () => {
             Cards against humanity
           </p>
           <div className="w-full border-t border-gray-300"></div>
-          <div className="flex gap-4">
+          <div className="flex gap-1 items-center">
+            <MicrophoneIcon className="w-4 h-4 text-gray-700" />
             <p className="text-xs text-gray-500 font-normal py-4">
               124 Episodes
             </p>
@@ -91,7 +95,8 @@ const ProfileCard = () => {
             Cards against humanity
           </p>
           <div className="w-full border-t border-gray-300"></div>
-          <div className="flex gap-4">
+          <div className="flex gap-1 items-center">
+            <MicrophoneIcon className="w-4 h-4 text-gray-700" />
             <p className="text-xs text-gray-500 font-normal py-4">
               124 Episodes
             </p>
