@@ -5,3 +5,8 @@
 * {
   font-family: Outfit;
 }
+
+@theme {
+  --breakpoint-xs: 375px;
+  /* --color-tinter-100: #333333; */
+}
