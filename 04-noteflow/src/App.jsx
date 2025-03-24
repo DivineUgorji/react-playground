@@ -8,6 +8,7 @@ import Logos from "./components/sections/Logos";
 import Features from "./components/sections/Features";
 import FAQs from "./components/sections/FAQs/FAQs";
 import Testimonials from "./components/sections/Testimonials/Testimonials";
+import Footer from "./components/sections/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <FAQs />
         <Testimonials />
       </Main>
+      <Footer />
     </Page>
   );
 }
