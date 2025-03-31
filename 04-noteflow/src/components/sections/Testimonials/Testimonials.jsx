@@ -7,12 +7,12 @@ function Testimonials() {
   const [expanded, setExpanded] = useState(true);
   return (
     <section className="bg-gradient-to-top">
-      <div className="py- m-auto flex max-w-[90rem] flex-col items-center px-24 py-32">
+      <div className="py- m-auto flex max-w-[90rem] flex-col items-center px-24 py-32 max-xl:px-16 max-xl:py-24">
         <div className="mb-20 flex max-w-[51.625rem] flex-col items-center gap-y-4">
           <p className="text-primary-1300 bg-primary-500 primary-glow w-min rounded-full px-4 py-2 text-base/8">
             Testimonials
           </p>
-          <h2 className="text-primary-50 text-center text-6xl/18 font-semibold tracking-tighter">
+          <h2 className="text-primary-50 text-center text-6xl/18 font-semibold tracking-tighter max-xl:text-5xl/16">
             What our AI-powered <br />
             notetakers have to say
           </h2>
@@ -21,14 +21,14 @@ function Testimonials() {
             cutting edge AI note taking tools
           </p>
         </div>
-        <div className="mb-20 grid grid-cols-3 gap-x-6">
+        <div className="mb-20 grid grid-cols-3 gap-x-6 max-xl:gap-x-4">
           <TestimonialList testimonials={test.slice(0, expanded ? 5 : 2)} />
           <TestimonialList testimonials={test.slice(5, expanded ? 10 : 7)} />
           <TestimonialList testimonials={test.slice(10, expanded ? 15 : 12)} />
         </div>
 
         <button
-          className="text-primary-50 border-primary-50 transition-properties hover:bg-primary-50 hover:text-primary-1300 group flex cursor-pointer items-center gap-x-3 rounded-full border-2 px-8 py-3.5 text-lg/8"
+          className="text-primary-50 border-primary-50 transition-properties hover:bg-primary-50 hover:text-primary-1300 group flex cursor-pointer items-center gap-x-3 rounded-full border-2 px-8 py-3.5 text-lg/8 max-xl:px-6 max-xl:py-3"
           onClick={() => setExpanded((curr) => !curr)}
         >
           {expanded ? "Show Less" : "Show More"}
