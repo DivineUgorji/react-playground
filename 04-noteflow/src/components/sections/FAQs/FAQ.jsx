@@ -12,7 +12,7 @@ function FAQ({ question, activeQuestion, handleQuestionClick }) {
         className="flex w-full cursor-pointer items-center"
         onClick={() => handleQuestionClick(question.id)}
       >
-        <div className="border-primary-50 mr-6 rounded-xl border-2 p-3.5">
+        <div className="border-primary-50 mr-6 rounded-xl border-2 p-3.5 max-lg:text-lg/8 max-lg:font-semibold">
           {
             <question.Icon
               width={2}
@@ -34,7 +34,7 @@ function FAQ({ question, activeQuestion, handleQuestionClick }) {
         </div>
       </button>
       <motion.p
-        className="text-primary-100 pt-0 pr-14 pl-20 text-lg/8 font-light"
+        className="text-primary-100 pt-0 pr-14 pl-20 text-lg/8 font-light max-lg:text-base/loose"
         initial={{ opacity: 0, maxHeight: 0, visibility: "hidden" }}
         animate={
           activeQuestion === question.id
