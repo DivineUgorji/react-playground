@@ -5,7 +5,7 @@ import { useModalContext } from "../../contexts/ModalContext";
 function Hero() {
   const { setActiveModal } = useModalContext();
   return (
-    <div className="max-xl: m-auto grid max-w-[90rem] grid-cols-[5fr_4fr] items-center gap-x-18 px-24 py-42 max-xl:grid-cols-2 max-xl:gap-x-12 max-xl:px-16 max-xl:py-38 max-lg:px-8 max-lg:py-32">
+    <div className="max-md:grid-rows-[repeat(2, auto)] m-auto grid max-w-[90rem] grid-cols-[5fr_4fr] items-center gap-x-18 px-24 py-42 max-xl:grid-cols-2 max-xl:gap-x-12 max-xl:px-16 max-xl:py-38 max-lg:px-8 max-lg:py-32 max-md:grid-cols-1 max-md:gap-y-12 max-md:px-6 max-md:py-24">
       <div className="">
         <h1 className="text-primary-50 font-semi max-xl: mb-6 text-6xl/18 font-semibold tracking-tighter max-xl:mb-4 max-xl:text-5xl/16 max-lg:text-4xl/10 max-lg:tracking-tight">
           AI-Powered Notes. Organize and Summarize in Seconds
@@ -36,7 +36,7 @@ function Hero() {
         <img
           src={HeroGraphic}
           alt="Hero graphic showing note summarizer"
-          className="relative max-h-[30rem] justify-self-end"
+          className="relative max-h-[30rem] justify-self-end max-md:max-h-auto max-md:max-w-[90%] max-md:justify-self-center"
         />
       </div>
     </div>
