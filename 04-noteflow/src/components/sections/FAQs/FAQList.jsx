@@ -1,13 +1,8 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-import FAQ from "./FAQ";
+import FAQ from "../FAQs/FAQ";
 
-export default function FAQList({
-  category,
-  questions,
-  activeQuestion,
-  handleQuestionClick,
-}) {
+function FAQList({ category, questions, activeQuestion, handleQuestionClick }) {
   const [inView, setInView] = useState(false);
 
   return (
@@ -44,3 +39,5 @@ export default function FAQList({
     </motion.ul>
   );
 }
+
+export default FAQList;

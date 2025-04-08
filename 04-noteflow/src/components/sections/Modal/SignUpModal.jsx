@@ -31,8 +31,8 @@ function SignUpModal() {
     }
   }
   return (
-    <section className="grid max-w-3xl grid-cols-2">
-      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 text-center max-md:px-6 max-md:py-8">
+    <section className="grid max-w-3xl grid-cols-2 max-sm:w-96 max-sm:grid-cols-1">
+      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 text-center max-md:px-6 max-md:py-8 max-sm:hidden">
         <h4 className="text-primary-50 text-4xl/12 font-bold tracking-tight max-md:text-base/loose">
           Lets Get You Signed Up
         </h4>
@@ -40,7 +40,7 @@ function SignUpModal() {
           No charges, no fees. Get note taking in minutes!
         </p>
       </div>
-      <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 max-md:px-6 max-md:py-8">
+      <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 max-md:px-6 max-md:py-8 max-sm:gap-y-16">
         <button
           className="border-primary-75 hover:bg-primary-75 group transition-properties ml-auto w-fit cursor-pointer rounded-xl border-2 p-3"
           onClick={() => setActiveModal("")}
@@ -50,7 +50,7 @@ function SignUpModal() {
             width={2}
           />
         </button>
-        <div className="text-primary-50 flex flex-col gap-y-6 text-lg/8 font-semibold tracking-tight max-md:font-normal">
+        <div className="text-primary-50 flex flex-col gap-y-6 text-lg/8 font-semibold tracking-tight max-md:font-normal max-sm:gap-y-3">
           <label htmlFor="email">
             Email
             <input
@@ -77,7 +77,7 @@ function SignUpModal() {
         <div>
           <div
             onClick={() => setChecked((currVal) => !currVal)}
-            className="m-auto mb-4 w-fit cursor-pointer gap-x-2"
+            className="m-auto mb-4 w-fit cursor-pointer gap-x-2 max-sm:mb-3"
           >
             <button
               className={`border-primary-100 transition-properties mr-2 inline-flex h-4 w-4 cursor-pointer items-center justify-center rounded-sm border-2 ${checked && "bg-primary-100"}`}
