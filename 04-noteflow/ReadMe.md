@@ -76,7 +76,7 @@ Your landing page will be live at http://localhost:5173
 
 ## 🌐 Live Demo
 
-Deployed on Netlify: [Site demo](noteflow-ai.netlify.app)
+Deployed on Netlify: [Site demo](https://noteflow-ai.netlify.app/)
 
 ## 📄 License
 
