@@ -475,6 +475,12 @@ const footerCols = [
     category: "Community",
     links: ["Forum", "Stories", "Blog", "Support"],
   },
+
+  {
+    id: 5,
+    category: "Community",
+    links: ["Forum", "Stories", "Blog", "Support"],
+  },
 ];
 
 const features = {
