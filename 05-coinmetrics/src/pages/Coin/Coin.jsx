@@ -9,7 +9,7 @@ const Coin = () => {
   const { currency } = useContext(CoinContext);
 
   const fetchCoinData = async () => {
-    const url = `https://pro-api.coingecko.com/api/v3/coins/${coinId}`;
+    const url = `https://api.coingecko.com/api/v3/coins/${coinId}`;
     // const options = {
     //   method: "GET",
     //   headers: { "x-cg-pro-api-key": "<api-key>" },
@@ -37,7 +37,9 @@ const Coin = () => {
         <div className="coin-name">
           <img src={coinData.image.large} alt="" />
           <p>
-            {coinData.name} ({coinData.symbol.toUpperCase()})
+            <b>
+              {coinData.name} ({coinData.symbol.toUpperCase()})
+            </b>
           </p>
         </div>
       </div>
