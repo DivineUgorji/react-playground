@@ -17,18 +17,24 @@ function CreateCabinForm() {
   const queryClient = useQueryClient();
   const { mutate, isLoading: isCreating } = useMutation({
     mutationFn: createCabin,
+    // onSuccess: () => {
+    //   toast.success("New Cabin successfully created");
+    //   queryClient.invalidateQueries({
+    //     queryKey: ["cabin"],
+    //   });
+    //   reset();
+    // },
     onSuccess: () => {
       toast.success("New Cabin successfully created");
-      queryClient.invalidateQueries({
-        queryKey: ["cabin"],
-      });
+      queryClient.invalidateQueries({ queryKey: ["cabin"] });
       reset();
     },
     onError: (error) => toast.error(error.message),
   });
 
   function onSubmitData(data) {
-    mutate(data);
+    mutate({ ...data, image: data.image[0] });
+    console.log(data);
   }
 
   function onError(errors) {
@@ -106,7 +112,14 @@ function CreateCabinForm() {
       </FormRow>
 
       <FormRow label="Cabin Photo">
-        <FileInput id="image" accept="image/*" />
+        <FileInput
+          id="image"
+          accept="image/*"
+          type="file"
+          {...register("image", {
+            required: "This field is required",
+          })}
+        />
       </FormRow>
 
       <FormRow>
