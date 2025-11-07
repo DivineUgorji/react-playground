@@ -26,7 +26,7 @@ export const LogoTicker = () => {
           className="overflow-hidden mt-9 before:content-[''] 
         after:content-[''] before:absolute after:absolute before:h-full 
         after:h-full before:w-5 after:w-5 relative
-        before:left-0 after:right-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right, #000, rgb(0,0,0,0))] after:bg-[linear-gradient(to_right, #000, rgb(0,0,0,0))]"
+        before:left-0 after:right-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,#000,rgba(0,0,0,0))] after:bg-[linear-gradient(to_left,#000,rgba(0,0,0,0))]"
         >
           <div className="flex gap-16 ">
             {images.map((imageSrc) => (
