@@ -1,7 +1,7 @@
 import React from "react";
 import EchoSystemIcon from "../assets/icons/ecosystem.svg";
 
-const features = [
+export const features = [
   {
     id: 1,
     title: "Integration Ecosystem",

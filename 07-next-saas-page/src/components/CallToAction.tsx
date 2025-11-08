@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const CallToAction = () => {
   return (
-    <div className="bg-black text-white text-center py-[72px] sm:py-24">
+    <div className="bg-black text-white w-full text-center py-[72px] sm:py-24 overflow-hidden">
       <div className="container max-w-xl relative">
         <Image
           src={helixImage}
@@ -14,7 +14,7 @@ export const CallToAction = () => {
         <Image
           src={emojiStarImage}
           alt=""
-          className="absolute -top-[120px] right-[calc(100%+24px)] "
+          className="absolute -top-[120px] right-[calc(100%+24px)]"
         />
         <h2 className="font-bold text-5xl sm:text-6xl tracking-tighter">
           Get instant access
@@ -25,12 +25,12 @@ export const CallToAction = () => {
         </p>
         <form
           action=""
-          className="flex flex-col gap-2.5 mt-10 max-w-sm mx-auto sm:flex-row"
+          className="flex flex-col gap-2.5  max-w-sm mx-auto sm:flex-row mt-10"
         >
           <input
             type="email"
             placeholder="your@email.com"
-            className="h-12 bg-white/20 rounded-lg px-5 flex-1 font-medium placeholder:text-[#9CA3AF]"
+            className="h-12 bg-white/20 rounded-lg px-5 sm:flex-1 font-medium placeholder:text-[#9CA3AF]"
           />
           <button className="bg-white text-black h-12 rounded-lg px-5">
             Get Access
@@ -40,3 +40,5 @@ export const CallToAction = () => {
     </div>
   );
 };
+
+export default CallToAction;

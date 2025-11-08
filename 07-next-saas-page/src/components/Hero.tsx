@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 import ArrowWIcon from "../assets/icons/arrow-w.svg";
 import cursorImage from "../assets/images/cursor.png";
 import messageImage from "../assets/images/message.png";
-
+import { motion } from "motion/react";
 export const Hero = () => {
   return (
     <div className="bg-black text-white hero-bg py-[72px] sm:py-24 relative overflow-clip">
@@ -30,20 +31,35 @@ export const Hero = () => {
               One Task <br />
               at a Time
             </h1>
-            <Image
-              src={cursorImage}
-              alt=""
-              height="200"
-              width="200"
+            <motion.div
               className="absolute right-[510px] top-[108px] hidden sm:inline"
-            />
-            <Image
-              src={messageImage}
-              alt=""
-              height="200"
-              width="200"
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={cursorImage}
+                alt=""
+                height="200"
+                width="200"
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
+
+            <motion.div
               className="absolute top-14 left-[530px] hidden sm:inline"
-            />
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={messageImage}
+                alt=""
+                height="200"
+                width="200"
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
         <div className="flex justify-center">
