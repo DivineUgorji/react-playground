@@ -1,5 +1,5 @@
 import React from "react";
-import EchoSystemIcon from "../assets/icons/ecosystem.svg";
+import { Feature } from "./Feature";
 
 export const features = [
   {
@@ -40,16 +40,7 @@ const Features = () => {
         </div>
         <ul className="flex flex-col sm:flex-row sm:flex-1 gap-4 mt-16">
           {features.map(({ id, title, description }) => (
-            <li
-              key={id}
-              className="border border-white/30 px-5 py-10 text-center rounded-xl"
-            >
-              <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
-                <EchoSystemIcon />
-              </div>
-              <h3 className="mt-6 font-bold">{title}</h3>
-              <p className="mt-2 text-white/70">{description}</p>
-            </li>
+            <Feature id={id} title={title} description={description} key={id} />
           ))}
         </ul>
       </div>
