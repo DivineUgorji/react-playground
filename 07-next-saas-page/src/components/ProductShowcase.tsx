@@ -3,7 +3,7 @@
 import Image from "next/image";
 import appScreen from "../assets/images/app-screen.png";
 import { motion, useScroll, useTransform } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export const ProductShowcase = () => {
   const appImageRef = useRef<HTMLImageElement>(null);

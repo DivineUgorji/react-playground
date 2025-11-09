@@ -2,6 +2,7 @@
 import { useState } from "react";
 import PlusIcon from "../assets/icons/plus.svg";
 import clsx from "clsx";
+import { motion, AnimatePresence } from "motion/react";
 
 const AccordionItem = ({
   question,
@@ -24,10 +25,19 @@ const AccordionItem = ({
           })}
         />
       </div>
-
-      <div className={clsx("mt-3 text-white/80", { hidden: !isOpen })}>
-        {answer}
-      </div>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="text-white/80 overflow-hidden"
+          >
+            {answer}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
